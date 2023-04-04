@@ -1,0 +1,65 @@
+.bigcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20rem;
+    margin: 50px; 
+    width: 80vh; 
+    height: 20vh;
+    border-radius: 30px;
+    background-color:rgb(33, 146, 33);
+  }
+  
+  .smallcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 800px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color:rgb(226, 216, 216);
+  }
+  
+  p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .task1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #addbtn,
+  #deletebtn,
+  #editbtn {
+    padding: 10 px 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+     cursor: pointer;
+    background-color:gray;
+    color: #fff;
+  }
+  
+  #addbtn:hover,
+  #deletebtn:hover,
+  #editbtn:hover {
+    background-color: #3e8e41;
+  }
+  
