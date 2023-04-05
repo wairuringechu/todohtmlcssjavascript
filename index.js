@@ -32,17 +32,17 @@ deletebtn.addEventListener("click", function() {
 
 // Add an event listener to the editbtn
 editbtn.addEventListener("click", function() {
-  // Get the first task in the task list
-  const firstTask = taskList.firstElementChild;
+  // Get each task in the task list
+  const eachTask = taskList.ElementChild;
 
   // Check if there is a task to edit
-  if (firstTask) {
+  if (eachTask) {
     // Prompt the user to edit the task text
-    const newTaskInput = prompt("Edit the task:", firstTask.innerText);
+    const newTaskInput = prompt("Edit the task:", eachTask.innerText);
 
     // Update the task text if the user entered a new value
     if (newTaskInput) {
-      firstTask.innerText = newTaskInput;
+      eachTask.innerText = newTaskInput;
     }
   }
 });
