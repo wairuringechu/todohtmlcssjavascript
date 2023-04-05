@@ -10,9 +10,15 @@ const taskList = document.getElementById("task-list");
 addbtn.addEventListener("click", function() {
   // Create the new item
   const newtask = document.createElement('li');
-  newtask.innerText = taskInput.value;
+  const taskText = document.createElement('span');
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  
+  taskText.innerText = taskInput.value;
 
   // Append the new item to the tasklist
+  newtask.appendChild(checkbox);
+  newtask.appendChild(taskText);
   taskList.appendChild(newtask);
 
   // Clear the taskInput field
@@ -32,17 +38,18 @@ deletebtn.addEventListener("click", function() {
 
 // Add an event listener to the editbtn
 editbtn.addEventListener("click", function() {
-  // Get each task in the task list
-  const eachTask = taskList.ElementChild;
+  // Get the checked task
+  const checkedTask = taskList.querySelector("li input[type=checkbox]:checked");
 
   // Check if there is a task to edit
-  if (eachTask) {
+  if (checkedTask) {
     // Prompt the user to edit the task text
-    const newTaskInput = prompt("Edit the task:", eachTask.innerText);
+    const newTaskInput = prompt("Edit the task:", checkedTask.nextSibling.innerText);
 
     // Update the task text if the user entered a new value
     if (newTaskInput) {
-      eachTask.innerText = newTaskInput;
+      checkedTask.nextSibling.innerText = newTaskInput;
     }
   }
 });
+
